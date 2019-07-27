@@ -5,6 +5,9 @@
 #ifndef _ARDUINO_SERIAL_DEBUG_BAUD_
 #define _ARDUINO_SERIAL_DEBUG_BAUD_ 115200
 #endif
+#ifndef _ARDUINO_SERIAL_DEBUG_
+#define _ARDUINO_SERIAL_DEBUG_
+#endif
 #define ARDUINO_SERIAL_DEBUG_SETUP(...) if(!Serial) { Serial.begin(_ARDUINO_SERIAL_DEBUG_BAUD_); } while(!Serial) {;}
 #define ARDUINO_SERIAL_DEBUG_SETUP_BAUD(...) if(!Serial) { Serial.begin(__VA_ARGS__); } while(!Serial) {;}
 #define ASD(...) Serial.print( __VA_ARGS__ )
